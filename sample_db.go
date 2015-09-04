@@ -65,7 +65,7 @@ func ConnectMongo() error {
     }
 
     conn += fmt.Sprintf("%s:%s/%s", host, port, instance)
-
+     log.Println("conn str:"+conn)
     session, err := mgo.Dial(conn)
     if err != nil {
         return err
